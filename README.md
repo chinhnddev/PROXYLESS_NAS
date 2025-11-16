@@ -44,6 +44,31 @@ ProxylessNAS/
 pip install -r requirements.txt
 ```
 
+## Data Preparation
+
+The CIFAR-10 dataset is required for training and search. The dataset file `cifar-10-python.tar.gz` is large (162.60 MB) and is handled using Git LFS.
+
+### Download CIFAR-10
+
+If the data is not present, download it manually:
+
+```bash
+# Download CIFAR-10 dataset
+wget https://www.cs.toronto.edu/~kriz/cifar-10-python.tar.gz -P data/
+tar -xzf data/cifar-10-python.tar.gz -C data/
+```
+
+### Git LFS Setup
+
+To handle large files like `cifar-10-python.tar.gz`, Git LFS is used:
+
+1. Install Git LFS if not already installed.
+2. Track `.tar.gz` files: `git lfs track "*.tar.gz"`
+3. Add `.gitattributes` to repository.
+4. The `.gitignore` file excludes `data/cifar-10-python.tar.gz` to avoid committing the large file directly.
+
+Note: If cloning the repository, run `git lfs pull` to download LFS-tracked files.
+
 ## Usage
 
 ### 1. Test the implementation (10 epochs)
