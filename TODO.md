@@ -1,0 +1,22 @@
+# ProxylessNAS Project Implementation TODO
+
+- [x] Create genotypes.py with official ProxylessNAS genotype for CIFAR-10
+- [x] Create models/ directory
+  - [x] models/__init__.py
+  - [x] models/proxyless_nas.py (main network with path-level binarization)
+  - [x] models/operations.py (mixed operations)
+  - [x] models/cells.py (cell definitions)
+- [x] Create utils/ directory
+  - [x] utils/__init__.py
+  - [x] utils/data.py (CIFAR-10/ImageNet data loading)
+  - [x] utils/utils.py (training utilities, logging)
+  - [x] utils/latency.py (latency lookup tables for bonus)
+- [x] Create search_cifar.py (NAS search script)
+- [x] Create train_cifar.py (training from scratch or genotype)
+- [x] Create visualize_cifar.py (architecture visualization with Graphviz)
+- [x] Create export_onnx.py (ONNX export)
+- [x] Create test_run.py (10-epoch test script)
+- [x] Create requirements.txt
+- [x] Create README.md with exact run commands
+- [x] Verify PyTorch 2.x compatibility and fix deprecations
+- [x] Test the project structure and functionality
